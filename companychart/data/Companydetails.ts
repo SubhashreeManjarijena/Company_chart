@@ -1,3 +1,10 @@
+export interface company {
+    name: string;
+    logo: string;
+    data: number[];
+    description?: string;
+    color?: string;
+}
 export const companies: Company[] = [
     { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg', data: [50, 60, 70, 80, 90] },
     { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Apple_Logo.svg/1200px-Apple_Logo.svg.png', data: [50, 60, 70, 80, 90] },
