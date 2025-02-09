@@ -7,7 +7,7 @@ import CompanyChart from '@/components/CompanyChart';
 import { fullCompanyList } from '@/data/Companydetails';
 import { BackgroundGradient } from '@/components/ui/background-gradient';
 
-export default function page() {
+export default function Page() {
   const [selectedCompany, setSelectedCompany] = useState<typeof fullCompanyList[0] | null>(null);
 
   return (
@@ -22,8 +22,7 @@ export default function page() {
           >
             
             <BackgroundGradient className="rounded-[22px] py-4 bg-white dark:bg-zinc-900">
-
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-7xl mx-auto">
+               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-7xl mx-auto">
            
               {fullCompanyList.map((company, index) => (
                 <motion.div
@@ -51,12 +50,12 @@ export default function page() {
                     text-center
                    
                   `}
-                >
+                    >
                   <div className="mb-3 h-16 w-16 flex items-center justify-center">
                  
                     <Image 
                       src={company.logo} 
-                      alt={`${company.name} logo`} 
+                      alt={${company.name} logo} 
                       width={80} 
                       height={80} 
                       className="object-contain"
@@ -78,19 +77,17 @@ export default function page() {
             exit={{ opacity: 0 }}
             className="container mx-auto p-4"
           >
-         
-            <div className="bg-white rounded-[2rem] shadow-2xl p-5">
+                <div className="bg-white rounded-[2rem] shadow-2xl p-5">
               <div className="flex items-center mb-8">
                 <Image 
                   src={selectedCompany.logo} 
-                  alt={`${selectedCompany.name} logo`} 
+                  alt={${selectedCompany.name} logo} 
                   width={100} 
                   height={100} 
                   className="mr-6 object-contain"
                 />
                 <div>
                   <h1 className="text-4xl font-bold text-gray-900">{selectedCompany.name}</h1>
-                  <p className="text-gray-600">{selectedCompany.description}</p>
                 </div>
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
@@ -111,3 +108,4 @@ export default function page() {
     </div>
   );
 }
+          
